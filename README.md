@@ -92,9 +92,14 @@ Switch(config-if)# switchport port-security
 Switch(config-if)# switchport port-security maximum 2
 Switch(config-if)# switchport port-security violation shutdown
 ```
-Beneficios
+### Beneficios
+
 Limita el número de direcciones MAC permitidas por puerto.
+
 Evita la saturación de la tabla CAM del switch.
+
 Reduce el riesgo de captura de tráfico mediante MAC Flooding.
+
 Permite detectar y bloquear dispositivos no autorizados.
+
 Incrementa la seguridad de la infraestructura de capa 2.
