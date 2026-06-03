@@ -8,7 +8,7 @@
 
 **Fecha:**  01 Junio 2026
 
-**Link del video**: https://youtu.be/KufHSaH6Ce8
+**Link del video**: https://youtu.be/RKuWaAdzVhc
 
 
 ---
@@ -66,6 +66,7 @@ El script implementa una simulación de un ataque de MAC Flooding en un entorno 
 Interfaz de red: eth0
 
 Topología: Router Cisco c7200, Switch Cisco IOU L2, Kali Linux (Atacante), VPCS (Víctima) y Cloud VMnet8.
+
 Red: 192.168.140.0/24
 
 Direcciones MAC de origen: Generadas de forma aleatoria para simular múltiples dispositivos dentro de la red.
