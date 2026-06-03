@@ -64,16 +64,24 @@ El script implementa una simulación de un ataque de MAC Flooding en un entorno 
 
 ### Parámetros Usados
 Interfaz de red: eth0
+
 Topología: Router Cisco c7200, Switch Cisco IOU L2, Kali Linux (Atacante), VPCS (Víctima) y Cloud VMnet8.
 Red: 192.168.140.0/24
+
 Direcciones MAC de origen: Generadas de forma aleatoria para simular múltiples dispositivos dentro de la red.
+
 Destino de las tramas: Direcciones MAC variables enviadas a través del switch objetivo.
+
 Herramienta utilizada: Python 3.x con Scapy.
+
 Objetivo: Saturar la tabla CAM (Content Addressable Memory) del switch mediante el envío masivo de tramas Ethernet con direcciones MAC falsificadas.
+
 Resultado esperado: El switch agota su capacidad de aprendizaje de direcciones MAC y comienza a reenviar tráfico a múltiples puertos, permitiendo observar el impacto de un ataque de MAC Flooding en un entorno de laboratorio controlado.
+
 ---
 
-Medidas de Mitigación
+### Medidas de Mitigación
+
 Para mitigar ataques de MAC Flooding, se recomienda implementar Port Security en los puertos de acceso del switch. Esta característica limita la cantidad de direcciones MAC que pueden aprenderse en una interfaz y permite definir acciones cuando se supera dicho límite. De esta manera, se evita que un atacante pueda inundar la tabla CAM del switch con direcciones MAC falsas y comprometer la confidencialidad del tráfico de la red.
 
 ```bash
