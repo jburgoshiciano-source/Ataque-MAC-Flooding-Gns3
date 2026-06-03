@@ -43,13 +43,21 @@ El laboratorio fue implementado en GNS3 con el propósito de simular una red cor
 
 Para la ejecución exitosa de estos scripts, se requiere el siguiente entorno:
 
-* **Sistema Operativo:** Kali Linux o cualquier distribución Linux .
+* **Sistema Operativo:** Kali Linux o cualquier distribución Linux compatible.
 * **Lenguaje:** Python 3.x.
 * **Librerías:** `Scapy` (Instalación: `sudo apt install python3-scapy`).
+* Simulador de Red: GNS3.
+Dispositivos Simulados:
+Router Cisco c7200.
+Switch Cisco IOU L2.
+VPCS (víctima).
+Cloud VMnet8.
+Permisos: Acceso de superusuario (root) para el envío de tramas Ethernet a nivel de capa 2.
+Ataque Simulado: MAC Flooding.
 
 ---
 
- Ataque : DHCP spoofing 
+ Ataque : MAC Flooding 
 
  ### Objetivo del Script
 El script implementa una simulación de un ataque de MAC Flooding en un entorno de laboratorio controlado. Su objetivo es generar y enviar una gran cantidad de tramas Ethernet utilizando direcciones MAC de origen aleatorias con el fin de saturar la tabla CAM (Content Addressable Memory) del switch. Al agotarse la capacidad de la tabla, el switch puede dejar de asociar correctamente las direcciones MAC a sus puertos y comenzar a reenviar tráfico a múltiples interfaces, comportándose de manera similar a un hub. Esta práctica permite demostrar cómo un atacante podría facilitar la captura de tráfico de otros dispositivos de la red, comprometiendo la confidencialidad de las comunicaciones y evidenciando la importancia de implementar mecanismos de seguridad de capa 2, como Port Security, en infraestructuras de red empresariales.
